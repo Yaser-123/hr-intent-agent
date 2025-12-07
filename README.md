@@ -73,7 +73,7 @@ See `agent.mermaid` for visual representation.
 
 4. **Install dependencies**:
    ```bash
-   pip install -e .
+   pip install -r requirements.txt
    ```
 
 ## Configuration
@@ -134,6 +134,7 @@ Expected output identifies `LeaveRequest` and `AddressUpdate` intents.
 ```
 .
 ├── main.py              # LangGraph agent implementation
+├── requirements.txt     # Python dependencies
 ├── langgraph.json       # LangGraph configuration
 ├── pyproject.toml       # Project metadata and dependencies
 ├── uipath.json          # UiPath-specific configuration
