@@ -1,0 +1,18 @@
+graph TD
+    START([START]) --> ExtractIntents[Extract Intents<br/>LLM analyzes user prompt<br/>to identify HR intents]
+    ExtractIntents --> ValidateWithHuman{Validate with Human<br/>Are intents found?}
+    ValidateWithHuman -->|No intents found| ActionCenter[Create Action in<br/>UiPath Action Center<br/>Human validates intents]
+    ValidateWithHuman -->|Intents exist| RouteIntents[Route Intents<br/>Print identified intents]
+    ActionCenter --> RouteIntents
+    RouteIntents --> END([END])
+    
+    style START fill:#90EE90
+    style END fill:#FFB6C1
+    style ExtractIntents fill:#87CEEB
+    style ValidateWithHuman fill:#FFD700
+    style ActionCenter fill:#FFA500
+    style RouteIntents fill:#87CEEB
+    
+    classDef llmNode fill:#87CEEB,stroke:#333,stroke-width:2px
+    classDef humanNode fill:#FFA500,stroke:#333,stroke-width:2px
+    classDef decisionNode fill:#FFD700,stroke:#333,stroke-width:3px

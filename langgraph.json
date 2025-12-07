@@ -1,0 +1,12 @@
+{
+  "dependencies": [
+    ".",
+    "langchain-anthropic",
+    "uipath-langchain"
+  ],
+  "graphs": {
+    "agent": "./main.py:app"
+  },
+  "env": ".env",
+  "python_version": "3.12"
+}

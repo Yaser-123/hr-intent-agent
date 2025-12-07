@@ -1,0 +1,20 @@
+{
+  "name": "MultiIntentIdentification_App",
+  "description": "HR Intent Identification Agent with Human-in-the-Loop via UiPath Action Center",
+  "version": "0.1.1",
+  "entryPoints": [
+    {
+      "filePath": "main.py:app",
+      "uniqueId": "agent",
+      "name": "agent",
+      "type": "assistant",
+      "input": {
+        "user_prompt": "string"
+      },
+      "output": {
+        "user_prompt": "string",
+        "intents": ["string"]
+      }
+    }
+  ]
+}
